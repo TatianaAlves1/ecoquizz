@@ -13,7 +13,7 @@ session_start();
         $_SESSION['id']   = $conn->lastInsertId();
         echo "ULTIMO ID: $_SESSION[id]";
     }else{
-        header('location:../index.html');
+        header('location:home');
     }
     
 $conn = null

@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('cadastro', (nome, email) => { 
+    cy.get('[data-test="nome"]').type(nome)
+    cy.get('[data-test="email"]').type(email)
+    cy.get('[data-test="btn-cad"]').click()
+ })

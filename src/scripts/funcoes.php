@@ -6,7 +6,7 @@ function verificar_email($conexao,$email){
     $vrf->bindParam(1,$email);
     $vrf->execute();
     if($vrf->rowCount()>0){
-        redirecionar_pagina("<div class='alert alert-danger' id='alerta' role='alert'>E-mail já cadastrado!</div>",'../index.php');
+        redirecionar_pagina("<div class='alert alert-danger' id='alerta' role='alert'>E-mail já cadastrado!</div>",'home');
         exit;
     }
 
@@ -29,7 +29,7 @@ function cadastrar_usuario($conexao,$nome,$email,$tipo){
 
     if($obj->execute()){
         // header('Location:);
-        redirecionar_pagina("<div class='alert alert-success' role='alert' id='alerta'>Bem-vindo(a) ".$nome."</div>",'../quiz.php');
+        redirecionar_pagina("<div class='alert alert-success' role='alert' id='alerta'>Bem-vindo(a) ".$nome."</div>",'../../quiz');
     }
 
 }

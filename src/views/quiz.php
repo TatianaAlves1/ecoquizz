@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('scripts/funcoes.php');
-verificar_sessao($_SESSION['id'],'index.html');
+require_once('src/scripts/funcoes.php');
+verificar_sessao($_SESSION['id'],'home');
 verificar_alerta();
 ?>
 
@@ -11,9 +11,9 @@ verificar_alerta();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/formEstilo.css">
+    <link rel="stylesheet" href="assets/css/formEstilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="assets/css/estilo.css">
     <title>EcoQUIZ</title>
     <style>
@@ -26,11 +26,11 @@ verificar_alerta();
 </head>
 <body>
 <header class="container pt-4">
-  <img src="img/ECOS_logo oficial_1.png" alt="logo ecos" class="img-fluid topo-img">
+  <img src="assets/img/ECOS_logo oficial_1.png" alt="logo ecos" class="img-fluid topo-img">
 </header>
 
 <main>
-  <form id="regForm" method="post" action="scripts/scriptQuiz.php">
+  <form id="regForm" method="post" action="resultado">
 
   <div class="tab container fs-4">
     <section class="container">
@@ -223,7 +223,7 @@ verificar_alerta();
 
   </form>
 </main>
-  <script src="js/multstep.js"></script>
+  <script src="assets/js/multstep.js"></script>
   <script src="assets/js/funcoes.js"></script>
   <script>ocultar_alerta();</script>
 </body>

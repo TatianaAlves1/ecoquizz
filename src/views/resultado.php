@@ -2,23 +2,21 @@
 ini_set('display_errors', 1);
 error_reporting(0);
 session_start();
-require_once('conexao.php');
-require_once('funcoes.php');
-verificar_sessao($_SESSION['id'],'../index.html');
+require_once('src/scripts/conexao.php');
+require_once('src/scripts/funcoes.php');
+verificar_sessao($_SESSION['id'],'home');
 
 if( isset($_SESSION['msg'])){
     echo $_SESSION['msg'];
 }
 
 $user = $_SESSION['id'];
-
 $totalQ1 = contar_pontos($_POST['q1']);
 $totalQ2 = contar_pontos($_POST['q2']);
 $totalQ3 = contar_pontos($_POST['q3']);
 $totalQ4 = contar_pontos($_POST['q4']);
 
 $soma = $totalQ1 + $totalQ2 + $totalQ3 + $totalQ4;
-
 cadastrar_resp($conn,$totalQ1,$totalQ2,$totalQ3,$totalQ4,$user);
 ?>
 
@@ -29,7 +27,7 @@ cadastrar_resp($conn,$totalQ1,$totalQ2,$totalQ3,$totalQ4,$user);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets//img/favicon.ico">
     <title>Resultado Final - Ecos</title>
     <style>
       .topo-img{
@@ -47,7 +45,7 @@ cadastrar_resp($conn,$totalQ1,$totalQ2,$totalQ3,$totalQ4,$user);
 </head>
 <body>
     <header class="container pt-4">
-    <img src="../img/ECOS_logo oficial_1.png" alt="logo ecos" class="img-fluid topo-img">
+    <img src="assets/img/ECOS_logo oficial_1.png" alt="logo ecos" class="img-fluid topo-img">
     </header>
 
     <main class="">

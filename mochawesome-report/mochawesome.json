@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-28T14:25:02.170Z",
+    "end": "2023-08-28T14:25:07.443Z",
+    "duration": 5273,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e97d26df-f87b-437a-9bf0-b66789ea68f9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro-usuario.cy.js",
+      "file": "cypress\\e2e\\cadastro-usuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "796c568b-7321-4f9a-b4f7-db658e4669ac",
+          "title": "Página Inicial",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar  cadastro de novo nome e e-mail(único) no banco",
+              "fullTitle": "Página Inicial Verificar  cadastro de novo nome e e-mail(único) no banco",
+              "timedOut": null,
+              "duration": 1822,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let caracteres = \"ABCDEFGHIJKLMNOPQRSTUVXZWYabcdefghijklmnopqrstuvwyz0123456789\";\nlet txt = '';\nfor (var i = 0; i <= 8; i++) {\n  txt += caracteres.charAt(Math.floor(Math.random() * caracteres.length));\n}\nvar nome = txt;\nvar email = txt + '@gmail.com';\ncy.cadastro(nome, email);\ncy.contains('Bem-vindo(a) ' + nome).should('be.visible');",
+              "err": {},
+              "uuid": "a88ed1b6-fa20-4d1c-a016-b07f97e322f3",
+              "parentUUID": "796c568b-7321-4f9a-b4f7-db658e4669ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Bloquear cadastro de email já cadastrado",
+              "fullTitle": "Página Inicial Bloquear cadastro de email já cadastrado",
+              "timedOut": null,
+              "duration": 1282,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.cadastro('Tatiana', 'tatiana@gmail.com');\ncy.contains('E-mail já cadastrado').should('be.visible');",
+              "err": {},
+              "uuid": "644b3add-5986-404a-aad2-6e04bdcc5d6f",
+              "parentUUID": "796c568b-7321-4f9a-b4f7-db658e4669ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a88ed1b6-fa20-4d1c-a016-b07f97e322f3",
+            "644b3add-5986-404a-aad2-6e04bdcc5d6f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3104,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
