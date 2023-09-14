@@ -33,7 +33,7 @@
       </section>    
     <main class="form-signin bg-light border">
       <img class="mb-4" src="assets/img/SENAC_Positiva_Horizontal.png" alt="" width="80%" height="80">
-      <form method="post" class="needs-validation" action=src/scripts/cadUser.php> novalidate>
+      <form method="post" class="needs-validation" action="src/scripts/cadUser.php" novalidate>
       
         <h1 class="h3 mb-3 fw-normal">Para iniciar preencha as informações:</h1>
 
@@ -48,7 +48,7 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-success mt-4" type="submit" data-test="btn-cad" name="cadastrar">Iniciar o Quiz</button>
-        <p class="mt-5 mb-3 text-muted">Programa Ecos - SENAC 2022</p>
+        <p class="mt-4 mb-2 text-muted">Programa Ecos - SENAC 2022</p>
       </form>
     </main>
     </section>

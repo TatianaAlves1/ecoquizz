@@ -1,10 +1,10 @@
 <?php
 
-$rota = $_GET['url'] ?? '';
+// $rota = $_GET['url'] ?? '';
+$request = explode("/",$_SERVER['REQUEST_URI']);
 
-
-
-switch($rota){
+// echo $request;
+switch($request[2]){
     case '':
         include __DIR__."/src/views/home.php";
         break;
